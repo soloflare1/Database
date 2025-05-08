@@ -3,10 +3,6 @@ Create table
 Insert 2 employee data
 Delete 1 employee data*/
 
-
-DROP TABLE IF EXISTS Customers;
-DROP TABLE IF EXISTS Orders;
-DROP TABLE IF EXISTS Shippings;
 DROP TABLE IF EXISTS EMPLOYEE;
 
 CREATE TABLE EMPLOYEE(
@@ -16,9 +12,14 @@ CREATE TABLE EMPLOYEE(
   JoiningDate DATE
 );
 
+
 INSERT INTO EMPLOYEE
 (EmployeeId,EmployeeName,EmployeeSalary,JoiningDate) 
 VALUES
 (1,'MR. AB', 50000, '20/2/24'),
 (2,'MR. XY', 10000, '12/3/24');
+
+
+DELETE FROM EMPLOYEE
+WHERE EmployeeId = 1;
     
