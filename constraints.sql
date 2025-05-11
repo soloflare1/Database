@@ -1,9 +1,6 @@
 -- Drop tables if they already exist
+DROP TABLE IF EXISTS Orders;
 DROP TABLE IF EXISTS Student;
--- ============================================
--- Table: Student
--- Description: Contains student details with various constraints
--- ============================================
 
 CREATE TABLE Student (
     id INTEGER NOT NULL,                              -- Unique ID
@@ -32,3 +29,16 @@ CREATE TABLE Student (
 -- with address and city 
 INSERT INTO Student(id, Name, Email, VarsityName,	Address, Age, City, size)
 VALUES(5, 'Naba', 'naba@gmail.com', 'BAIUST','Bangladesh', 20, 'Cumilla', 'L');
+
+
+
+CREATE TABLE Persons (
+    Person_ID int NOT NULL PRIMARY KEY,
+    Name varchar(45) NOT NULL
+);
+
+CREATE TABLE Orders (
+    Order_ID int NOT NULL PRIMARY KEY,
+    Person_ID int,
+    FOREIGN KEY (Person_ID) REFERENCES Persons(Person_ID)
+);
