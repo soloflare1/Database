@@ -15,6 +15,7 @@ CREATE TABLE Student(
 );
 
 
+--INPUT
 -- Inserting a row into Student
 INSERT INTO Student (ID, Name, Marks) 
 VALUES ('1', 'ABC', 90);
