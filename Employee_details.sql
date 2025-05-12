@@ -1,6 +1,3 @@
-Drop Table if Exists Fees;
-Drop Table if Exists Library;
-Drop Table if Exists Student;
 Drop Table if Exists Employee;
 
 Create Table Employee
@@ -44,5 +41,8 @@ From Employee;
 
 Select *
 From Employee
-Where Department = 'Engineering';
+Where FirstName LIKE '%son%' OR LastName LIKE '%son%';
 
+Select *
+From Employee
+Where Department = 'Engineering';
