@@ -6,10 +6,10 @@ from employees
 where salary <
 (
     select salary
-  	from employees
+	from employees
     where 
         first_name = 'Steven' 
-		    and last_name = 'King'
+		and last_name = 'King'
 );
 
 -- in SQL
@@ -17,7 +17,7 @@ where salary <
 -- Use AND to combine conditions.
 
 -- or
-select first_name
+select first_name,last_name
 from employees
 where salary <
 (
