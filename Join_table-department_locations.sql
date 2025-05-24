@@ -1,3 +1,5 @@
+-- *Write a query to display the names of all cities where departments are located.*
+
 select locations.city
 from departments
 join locations on departments.location_id = locations.location_id;
