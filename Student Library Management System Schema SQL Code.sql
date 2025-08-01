@@ -41,5 +41,6 @@ use StudentLibraryManagement;
      primary key(who_permitted_lib_id, which_book_id)
  );
 
-
+--Schema = Table's structure/design -> what columns + what type of data
+ 
 
