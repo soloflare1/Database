@@ -175,7 +175,75 @@ create table enrollments(
 ```
 
 
+***************************
+# ⭐ **Does child table need same number of rows as parent?**
 
+❌ **NO! Not required.**
+
+Child table does **NOT** need to have:
+
+* same number of rows
+* same values
+* same amount of data
+
+Only rule is:
+
+# ✔ **Every child value must exist in the parent.**
+
+That’s it.
+
+---
+
+# ⭐ Example (Easy)
+
+### Parent: `students`
+
+```
+student_id
+-----------
+1
+2
+3
+4
+5
+```
+
+### Child: `enrollments`
+
+```
+student_id   course_id
+-----------  ---------
+1            101
+1            102
+3            101
+5            105
+```
+
+### Observations:
+
+* Parent has **5 values**
+* Child has only **4 rows**
+* Child uses only: **1, 1, 3, 5**
+* Parent has values child never uses (2, 4) → **totally fine**
+* Child values (1, 3, 5) exist in parent → ✔ valid
+* If child tries 10 (not in parent) → ❌ foreign key error
+
+---
+
+# ⭐
+
+| Question                                            | Answer                             |
+| --------------------------------------------------- | ---------------------------------- |
+| Child table must have same number of rows?          | ❌ No                               |
+| Child must use all parent values?                   | ❌ No                               |
+| Parent must have matching value for each child row? | ✔ Yes                              |
+| Child can have fewer rows?                          | ✔ Yes                              |
+| Child can repeat parent values?                     | ✔ Yes (1 student many enrollments) |
+
+
+
+
+**************************
 
 
 ## 1. Definition
